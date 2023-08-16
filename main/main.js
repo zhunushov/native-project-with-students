@@ -61,7 +61,8 @@ async function renderGoods() {
   const res = await fetch(
     `${API}?q=${searchValue}&_page=${currentPage}&_limit=${LIMIT}`
   );
-
+  countPage = Math.ceil(res.headers.get("x-total-count") / LIMIT);
+  updatePaginationButtons();
   const data = await res.json();
 
   section.innerHTML = "";
@@ -95,25 +96,14 @@ async function renderGoods() {
             </div>
         `;
   });
-  pageFunc();
 }
 
-async function pageFunc() {
-  const res = await fetch(API);
-  const data = await res.json();
+function updatePaginationButtons() {
+  const isLastPage = currentPage === countPage;
+  const isFirstPage = currentPage === 1;
 
-  countPage = Math.ceil(data.length / LIMIT);
-  if (currentPage === countPage) {
-    nextBtn.parentElement.classList.add("disabled");
-  } else {
-    nextBtn.parentElement.classList.remove("disabled");
-  }
-
-  if (currentPage === 1) {
-    prevBtn.parentElement.classList.add("disabled");
-  } else {
-    prevBtn.parentElement.classList.remove("disabled");
-  }
+  nextBtn.parentElement.classList.toggle("disabled", isLastPage);
+  prevBtn.parentElement.classList.toggle("disabled", isFirstPage);
 }
 
 // ------delete

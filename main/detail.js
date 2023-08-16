@@ -1,4 +1,5 @@
 const API = "http://localhost:8000/goods";
+
 const detailBlock = document.getElementById("detail");
 
 async function getOneGood(id) {
@@ -53,6 +54,4 @@ async function getOneGood(id) {
   `;
 }
 
-const id = localStorage.getItem("detail-id");
-getOneGood(id);
-// console.log(id);
+getOneGood(localStorage.getItem("detail-id"));

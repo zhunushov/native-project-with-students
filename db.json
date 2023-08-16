@@ -1,13 +1,6 @@
 {
   "goods": [
     {
-      "title": "apple",
-      "description": "егншщ",
-      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookpro13m2/spacegray/apple-macbook-pro-13p3-space-grey-m2-256gb-ssd-laptop-mneh3lla-half-closed-670x540.webp",
-      "price": "нгшщ",
-      "id": 1
-    },
-    {
       "title": "Nokia",
       "description": "rytrytryt",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiDPWd6K10Dt5YBhF3gpKn1HJVa0xjWJZJOA&usqp=CAU",
@@ -15,81 +8,26 @@
       "id": 2
     },
     {
-      "title": "mac book",
-      "description": "uygouigy",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu0R3bo60qkjNADtSJ1LtpNP-hCHJoHzGjkw&usqp=CAU",
-      "price": "122",
-      "id": 3
-    },
-    {
       "title": "Lenove",
       "description": "4r5t6y789",
       "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookpro13m2/spacegray/apple-macbook-pro-13p3-space-grey-m2-256gb-ssd-laptop-mneh3lla-half-closed-670x540.webp",
       "price": "45678",
-      "id": 4
+      "id": 4,
+      "desc": "Hast a lin"
     },
     {
-      "title": "aser",
-      "description": "oiuoiuoiu",
-      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookpro13m2/spacegray/apple-macbook-pro-13p3-space-grey-m2-256gb-ssd-laptop-mneh3lla-half-closed-670x540.webp",
-      "price": "111",
-      "id": 5
+      "title": "Xiomi",
+      "desc": "   Lorem ipsum dolor sit amet",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3PzOTJLccoxxB4R8TEIsgK0ljxIF6kLRCYg&usqp=CAU",
+      "price": "400",
+      "id": 8663
     },
     {
-      "title": "aser",
-      "description": "oiuoiuoi",
-      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookpro13m2/spacegray/apple-macbook-pro-13p3-space-grey-m2-256gb-ssd-laptop-mneh3lla-half-closed-670x540.webp",
-      "price": "323",
-      "id": 6
-    },
-    {
-      "title": "ooiuoiu",
-      "description": "iouoiu",
-      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookpro13m2/spacegray/apple-macbook-pro-13p3-space-grey-m2-256gb-ssd-laptop-mneh3lla-half-closed-670x540.webp",
-      "price": "oipoi",
-      "id": 7
-    },
-    {
-      "title": "ijoiu",
-      "description": "oiuoi",
-      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookpro13m2/spacegray/apple-macbook-pro-13p3-space-grey-m2-256gb-ssd-laptop-mneh3lla-half-closed-670x540.webp",
-      "price": "1222",
-      "id": 8
-    },
-    {
-      "title": "iuoiu",
-      "description": "oiuoiuoiu",
-      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookpro13m2/spacegray/apple-macbook-pro-13p3-space-grey-m2-256gb-ssd-laptop-mneh3lla-half-closed-670x540.webp",
-      "price": "111",
-      "id": 52
-    },
-    {
-      "title": "iuiouoiu",
-      "description": "oiuoiuoi",
-      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookpro13m2/spacegray/apple-macbook-pro-13p3-space-grey-m2-256gb-ssd-laptop-mneh3lla-half-closed-670x540.webp",
-      "price": "323",
-      "id": 64
-    },
-    {
-      "title": "ooiuoiu",
-      "description": "iouoiu",
-      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookpro13m2/spacegray/apple-macbook-pro-13p3-space-grey-m2-256gb-ssd-laptop-mneh3lla-half-closed-670x540.webp",
-      "price": "oipoi",
-      "id": 75
-    },
-    {
-      "title": "ijoiu",
-      "description": "oiuoi",
-      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookpro13m2/spacegray/apple-macbook-pro-13p3-space-grey-m2-256gb-ssd-laptop-mneh3lla-half-closed-670x540.webp",
-      "price": "1222",
-      "id": 866
-    },
-    {
-      "title": "ijoiu",
-      "description": "oiuoi",
-      "image": "https://asiastore.kg/image/cachewebp/catalog/mac/macbookpro13m2/spacegray/apple-macbook-pro-13p3-space-grey-m2-256gb-ssd-laptop-mneh3lla-half-closed-670x540.webp",
-      "price": "1222",
-      "id": 8662
+      "title": "fsd",
+      "desc": "fsdf",
+      "image": "fdsffff",
+      "price": "f",
+      "id": 8664
     }
   ]
 }
