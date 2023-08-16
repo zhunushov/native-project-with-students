@@ -56,51 +56,24 @@ createButton.addEventListener("click", () => {
   createAccordion.classList.remove("show");
 });
 
-// функция создания карточки товара
-function createProductCard({ price, title, desc, image, id }) {
-  return `
-    <div class="card m-1 cardBook" style="width: 18rem">
-        <img id="${id}" src=${image} class="card-img-top detailsCard" style="height: 280px" alt="${title}"/>
-        <div class="card-body">
-            <h5 class="card-title">${title}</h5>
-            <p class="card-text">${desc}</p>
-            <p class="card-text">${price}</p>
-
-            <button class="btn btn-outline-danger delete-button" id="${id}">
-                Удалить
-            </button>
-            <button 
-                class="btn btn-outline-warning edit-button" id="${id}"
-                data-bs-target="#exampleModal"
-                data-bs-toggle="modal"
-            >
-                Изменить
-            </button>
-            <a href="./detail.html">
-                <button 
-                    class="btn btn-outline-info detail-button mt-1" id="${id}"
-                >
-                    Details
-                </button>
-            </a>
-        </div>
-    </div>
-    `;
-}
-
 // Оптимизированная функция рендеринга списка товаров
 async function renderGoods() {
-  const term = searchInput.value;
-  const res = await fetch(
-    `${API}?q=${term}&_page=${currentPage}&_limit=${LIMIT}`
-  );
+  const params = new URLSearchParams({
+    ...(searchInput.value && { title: searchInput.value }),
+    _page: currentPage,
+    _limit: LIMIT,
+  });
+  //   params.set("title", searchInput.value);
+
+  const res = await fetch(`${API}?${params}`);
   const data = await res.json();
+
   countPage = Math.ceil(res.headers.get("x-total-count") / LIMIT);
 
   toggleDisabledClass(nextBtn, currentPage === countPage);
   toggleDisabledClass(prevBtn, currentPage === 1);
 
-  section.innerHTML = data.map(createProductCard);
+  section.innerHTML = data.map(createProductCard).join("");
 }
 renderGoods();
 
@@ -120,6 +93,7 @@ async function getProductById(id) {
       input.value = item[input.name];
     }
     saveEditedButton.setAttribute("id", item.id);
+    return item;
   } catch (error) {
     console.log(error);
   }
@@ -183,4 +157,36 @@ searchButton.addEventListener("click", renderGoods);
 
 function toggleDisabledClass(element, condition) {
   element.classList.toggle("disabled", condition);
+}
+
+// функция создания карточки товара
+function createProductCard({ price, title, desc, image, id }) {
+  return `
+      <div class="card m-1 cardBook" style="width: 18rem">
+          <img id="${id}" src=${image} class="card-img-top detailsCard" style="height: 280px" alt="${title}"/>
+          <div class="card-body">
+              <h5 class="card-title">${title}</h5>
+              <p class="card-text">${desc}</p>
+              <p class="card-text">${price}</p>
+  
+              <button class="btn btn-outline-danger delete-button" id="${id}">
+                  Удалить
+              </button>
+              <button 
+                  class="btn btn-outline-warning edit-button" id="${id}"
+                  data-bs-target="#exampleModal"
+                  data-bs-toggle="modal"
+              >
+                  Изменить
+              </button>
+              <a href="./detail.html">
+                  <button 
+                      class="btn btn-outline-info detail-button mt-1" id="${id}"
+                  >
+                      Details
+                  </button>
+              </a>
+          </div>
+      </div>
+      `;
 }

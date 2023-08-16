@@ -2,7 +2,7 @@
   "goods": [
     {
       "title": "Nokia",
-      "description": "rytrytryt",
+      "desc": "rytrytryt",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiDPWd6K10Dt5YBhF3gpKn1HJVa0xjWJZJOA&usqp=CAU",
       "price": "123",
       "id": 2
